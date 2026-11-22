@@ -27,177 +27,220 @@
     </nav>
 
     <div class="resume-container">
+      <!-- Top Action Bar -->
       <div class="resume-actions">
         <a href="/" class="btn-back">← Back to Portfolio</a>
+        <a href="/resume.pdf" download="Priyadharshini_B_Resume.pdf" class="btn-download" target="_blank" rel="noopener noreferrer">
+          📥 Download Resume (PDF)
+        </a>
       </div>
 
-      <!-- Resume Card -->
-      <div class="resume-card">
-        <div class="resume-header">
-          <h1>PRIYADHARSHINI B</h1>
-          <div class="resume-subtitle">FULL STACK DEVELOPER</div>
-          <div class="resume-contact-bar">
-            <span>📞 99943 61797</span>
-            <span>✉️ <a href="mailto:priyadharshini.b19012006@gmail.com" style="color:var(--c-cyan)">priyadharshini.b19012006@gmail.com</a></span>
-            <span>📍 Chennai, Tamil Nadu</span>
-          </div>
-        </div>
+      <!-- Tab Switcher -->
+      <div class="tab-switcher">
+        <button class="tab-btn active" data-tab="interactive">Interactive View</button>
+        <button class="tab-btn" data-tab="pdf">Original PDF</button>
+      </div>
 
-        <!-- Profile Summary -->
-        <div class="resume-section">
-          <h2 class="resume-section-title">✨ Profile Summary</h2>
-          <p style="color: #cbd5e1; line-height: 1.7; font-size: 0.98rem;">
-            I am PriyaDharshini, a 3rd year Computer Science and Business Systems student with a strong interest in software development. Skilled in problem solving, basic programming, and understanding of modern technologies. Passionate about learning new tools and building practical solutions. Seeking an opportunity to apply technical knowledge and grow in the software industry.
-          </p>
-        </div>
-
-        <div class="resume-grid">
-          <!-- Left Column -->
-          <div>
-            <!-- Education -->
-            <div class="resume-section">
-              <h2 class="resume-section-title">🎓 Education</h2>
-              <div class="resume-item">
-                <div class="resume-item-header">
-                  <span class="resume-item-title">BTECH Computer Science and Business System</span>
-                  <span class="resume-item-date">2023 - 2027</span>
-                </div>
-                <div class="resume-item-org">Dhaanish Ahmed College of Engineering</div>
-                <div style="color: var(--c-gold); font-weight: 600; font-size: 0.9rem;">GPA: 8.6+ / 10</div>
-                <div style="color: var(--muted); font-size: 0.88rem;">Kancheepuram, Tamil Nadu</div>
-              </div>
-            </div>
-
-            <!-- Technical Skills -->
-            <div class="resume-section">
-              <h2 class="resume-section-title">💻 Technical Skills</h2>
-              <div style="display: flex; flex-direction: column; gap: 10px;">
-                <div>
-                  <strong style="color: var(--c-cyan); font-size: 0.9rem;">Programming Languages:</strong>
-                  <div class="skills" style="margin-top: 6px;">
-                    <span class="chip">Java</span>
-                  </div>
-                </div>
-                <div>
-                  <strong style="color: var(--c-cyan); font-size: 0.9rem;">Frontend Development:</strong>
-                  <div class="skills" style="margin-top: 6px;">
-                    <span class="chip">HTML</span>
-                    <span class="chip">CSS</span>
-                    <span class="chip">JavaScript</span>
-                  </div>
-                </div>
-                <div>
-                  <strong style="color: var(--c-cyan); font-size: 0.9rem;">Core Concepts:</strong>
-                  <div class="skills" style="margin-top: 6px;">
-                    <span class="chip">DBMS</span>
-                    <span class="chip">OOPS</span>
-                    <span class="chip">OS</span>
-                  </div>
-                </div>
-                <div>
-                  <strong style="color: var(--c-cyan); font-size: 0.9rem;">Database & Frameworks:</strong>
-                  <div class="skills" style="margin-top: 6px;">
-                    <span class="chip">SQL</span>
-                    <span class="chip">JDBC</span>
-                    <span class="chip">Hibernate</span>
-                    <span class="chip">SpringBoot</span>
-                  </div>
-                </div>
-                <div>
-                  <strong style="color: var(--c-cyan); font-size: 0.9rem;">Tools & IDEs:</strong>
-                  <div class="skills" style="margin-top: 6px;">
-                    <span class="chip">Git</span>
-                    <span class="chip">GitHub</span>
-                    <span class="chip">VS Code</span>
-                    <span class="chip">STS IDE</span>
-                    <span class="chip">IntelliJ IDE</span>
-                    <span class="chip">MySQL Workbench</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Certifications -->
-            <div class="resume-section">
-              <h2 class="resume-section-title">📜 Certifications</h2>
-              <ul class="resume-item-bullets">
-                <li>Java - Infosys Springboard</li>
-                <li>Full Stack Development - Novitech</li>
-                <li>Python - Infosys Springboard</li>
-                <li>Oracle Cloud Infrastructure</li>
-                <li>MongoDB</li>
-              </ul>
-            </div>
-
-            <!-- Languages & Links -->
-            <div class="resume-section">
-              <h2 class="resume-section-title">🌐 Profile Links & Languages</h2>
-              <div style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 14px;">
-                <div>💼 <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/priyadharshini-b-921ba0325" target="_blank" style="color:var(--c-cyan)">linkedin.com/in/priyadharshini-b-921ba0325</a></div>
-                <div>🐙 <strong>GitHub:</strong> <a href="https://github.com/Dharshini19-01" target="_blank" style="color:var(--c-cyan)">github.com/Dharshini19-01</a></div>
-                <div>⚡ <strong>LeetCode:</strong> <a href="https://leetcode.com/Priyadharshini_19" target="_blank" style="color:var(--c-cyan)">Priyadharshini_19</a></div>
-              </div>
-              <div>🗣️ <strong>Languages:</strong> Tamil, English</div>
+      <!-- Interactive View -->
+      <div id="interactiveView">
+        <div class="resume-card">
+          <!-- Header -->
+          <div class="resume-header">
+            <h1>PRIYADHARSHINI B</h1>
+            <div class="resume-subtitle">JAVA DEVELOPER</div>
+            <div class="resume-contact-bar">
+              <span>📞 <a href="tel:+919994361797" style="color:inherit">+91-9994361797</a></span>
+              <span>✉️ <a href="mailto:priyadharshini.b19012006@gmail.com" style="color:var(--c-cyan)">priyadharshini.b19012006@gmail.com</a></span>
+              <span>💼 <a href="https://www.linkedin.com/in/priyadharshini-b-921ba0325" target="_blank" rel="noopener noreferrer" style="color:var(--c-cyan)">LinkedIn</a></span>
+              <span>🐙 <a href="https://github.com/Dharshini19-01" target="_blank" rel="noopener noreferrer" style="color:var(--c-cyan)">GitHub</a></span>
+              <span>🌐 <a href="/" style="color:var(--c-cyan)">Portfolio</a></span>
             </div>
           </div>
 
-          <!-- Right Column -->
-          <div>
-            <!-- Internships -->
-            <div class="resume-section">
-              <h2 class="resume-section-title">💼 Internships</h2>
-              
-              <div class="resume-item">
-                <div class="resume-item-header">
-                  <span class="resume-item-title">Full Stack Development</span>
-                  <span class="resume-item-date">12/06/2025</span>
+          <!-- Summary -->
+          <div class="resume-section">
+            <h2 class="resume-section-title">✨ Summary</h2>
+            <p style="color: #cbd5e1; line-height: 1.75; font-size: 0.98rem;">
+              Java Web Developer and Computer Science &amp; Business Systems student with a strong foundation in Java, SQL, DBMS, OOP, and web development. Hands-on experience through Web Development and Data Analytics internships. Passionate about building scalable software solutions, solving real-world problems, and continuously learning modern technologies. Seeking an entry-level Software Development Engineer role to contribute and grow in a dynamic organization.
+            </p>
+          </div>
+
+          <!-- Two-column grid -->
+          <div class="resume-grid">
+            <!-- Left Column -->
+            <div>
+              <!-- Skills -->
+              <div class="resume-section">
+                <h2 class="resume-section-title">💻 Skills</h2>
+                <div style="display: flex; flex-direction: column; gap: 14px;">
+                  <div>
+                    <strong style="color: var(--c-cyan); font-size: 0.9rem;">Programming Languages:</strong>
+                    <div class="skills" style="margin-top: 6px;">
+                      <span class="chip">Java</span>
+                    </div>
+                  </div>
+                  <div>
+                    <strong style="color: var(--c-cyan); font-size: 0.9rem;">Backend:</strong>
+                    <div class="skills" style="margin-top: 6px;">
+                      <span class="chip">Spring Boot</span>
+                      <span class="chip">RESTful API</span>
+                      <span class="chip">JDBC</span>
+                      <span class="chip">Hibernate</span>
+                      <span class="chip">Spring Data JPA</span>
+                    </div>
+                  </div>
+                  <div>
+                    <strong style="color: var(--c-cyan); font-size: 0.9rem;">Frontend:</strong>
+                    <div class="skills" style="margin-top: 6px;">
+                      <span class="chip">HTML</span>
+                      <span class="chip">CSS</span>
+                      <span class="chip">JavaScript</span>
+                    </div>
+                  </div>
+                  <div>
+                    <strong style="color: var(--c-cyan); font-size: 0.9rem;">Database:</strong>
+                    <div class="skills" style="margin-top: 6px;">
+                      <span class="chip">MySQL</span>
+                      <span class="chip">MongoDB</span>
+                    </div>
+                  </div>
+                  <div>
+                    <strong style="color: var(--c-cyan); font-size: 0.9rem;">Developer Tools:</strong>
+                    <div class="skills" style="margin-top: 6px;">
+                      <span class="chip">Git</span>
+                      <span class="chip">GitHub</span>
+                      <span class="chip">Postman</span>
+                      <span class="chip">Vercel</span>
+                      <span class="chip">Render</span>
+                      <span class="chip">Cloudinary</span>
+                    </div>
+                  </div>
+                  <div>
+                    <strong style="color: var(--c-cyan); font-size: 0.9rem;">Concepts:</strong>
+                    <div class="skills" style="margin-top: 6px;">
+                      <span class="chip">OOP</span>
+                      <span class="chip">DBMS</span>
+                      <span class="chip">Data Structures &amp; Algorithms</span>
+                      <span class="chip">API Integration</span>
+                    </div>
+                  </div>
+                  <div>
+                    <strong style="color: var(--c-cyan); font-size: 0.9rem;">GenAI:</strong>
+                    <div class="skills" style="margin-top: 6px;">
+                      <span class="chip">Spring AI</span>
+                    </div>
+                  </div>
                 </div>
-                <div class="resume-item-org">Novitech R&D Private Limited</div>
-                <ul class="resume-item-bullets">
-                  <li>Learned and developed web pages which contain basic functionality.</li>
-                  <li>Gained hands-on experience in developing and understanding real-world web applications.</li>
-                </ul>
               </div>
 
-              <div class="resume-item">
-                <div class="resume-item-header">
-                  <span class="resume-item-title">Data Science and Data Analytics</span>
-                  <span class="resume-item-date">22/01/2025</span>
+              <!-- Education -->
+              <div class="resume-section">
+                <h2 class="resume-section-title">🎓 Education</h2>
+                <div class="resume-item">
+                  <div class="resume-item-header">
+                    <span class="resume-item-title">Dhaanish Chennai College Of Engineering</span>
+                    <span class="resume-item-date">Chennai, India</span>
+                  </div>
+                  <div class="resume-item-org" style="font-style: italic; color: #e2e8f0; font-size: 0.95rem;">
+                    B.Tech Computer Science and Business Systems
+                  </div>
+                  <div style="color: var(--c-gold); font-weight: 700; font-size: 0.95rem; margin-top: 4px;">
+                    CGPA: 8.7 / 10
+                  </div>
                 </div>
-                <div class="resume-item-org">NSIC – Technical Services Centre</div>
+              </div>
+
+              <!-- Awards & Certificates -->
+              <div class="resume-section">
+                <h2 class="resume-section-title">📜 Awards &amp; Certificates</h2>
                 <ul class="resume-item-bullets">
-                  <li>Analyzed datasets and created visualizations to identify patterns and extract meaningful insights.</li>
-                  <li>Improved problem-solving skills and gained understanding of real-world data applications.</li>
+                  <li>Oracle Cloud Infrastructure Foundations Associate</li>
+                  <li>Java Programming – Infosys Springboard</li>
+                  <li>MongoDB Fundamentals</li>
+                  <li>UI/UX Design – NoviTech R&amp;D Pvt Ltd Company</li>
                 </ul>
               </div>
             </div>
 
-            <!-- Projects -->
-            <div class="resume-section">
-              <h2 class="resume-section-title">🚀 Projects</h2>
-              
-              <div class="resume-item">
-                <div class="resume-item-title">BANKING MANAGEMENT SYSTEM</div>
-                <p style="color: var(--muted); font-size: 0.92rem; margin-top: 4px;">
-                  This website can follow up the account holders details and manage their records then transaction history.
-                </p>
+            <!-- Right Column -->
+            <div>
+              <!-- Internship -->
+              <div class="resume-section">
+                <h2 class="resume-section-title">💼 Internship</h2>
+                <div class="resume-item">
+                  <div class="resume-item-header">
+                    <span class="resume-item-title">Full Stack Development Intern</span>
+                    <span class="resume-item-date">April 2026 – June 2026</span>
+                  </div>
+                  <div class="resume-item-org" style="font-style: italic; color: #94a3b8; font-size: 0.95rem; margin-bottom: 8px;">
+                    Novitech R&amp;D Private Limited
+                  </div>
+                  <ul class="resume-item-bullets">
+                    <li>Built responsive web pages using HTML and CSS, gaining practical experience in frontend development.</li>
+                    <li>Developed and worked with Java-based backend functionalities using JDBC and Spring Boot concepts.</li>
+                    <li>Worked with MySQL databases and learned database operations and data management.</li>
+                    <li>Gained hands-on experience in integrating frontend, backend, and database components in web applications.</li>
+                    <li>Learned the practical development and testing process involved in building real-world web applications.</li>
+                  </ul>
+                </div>
               </div>
 
-              <div class="resume-item">
-                <div class="resume-item-title">RESTAURANT WEBSITE</div>
-                <p style="color: var(--muted); font-size: 0.92rem; margin-top: 4px;">
-                  The website can show the menus and prices of the food then the general functionalities which is present in all websites.
-                </p>
-              </div>
+              <!-- Projects -->
+              <div class="resume-section">
+                <h2 class="resume-section-title">🚀 Projects</h2>
 
-              <div class="resume-item">
-                <div class="resume-item-title">BUS BOOKING SYSTEM (LLD PROJECT)</div>
-                <p style="color: var(--muted); font-size: 0.92rem; margin-top: 4px;">
-                  A Low-Level Design project focusing on object-oriented system design, seat selection, booking workflow and design patterns.
-                </p>
+                <!-- Banking Management System -->
+                <div class="resume-item" style="margin-bottom: 28px;">
+                  <div class="resume-item-header">
+                    <span class="resume-item-title">Banking Management System</span>
+                  </div>
+                  <div style="font-size: 0.88rem; margin: 4px 0 10px 0;">
+                    <span style="color: var(--muted);">Source Code: </span>
+                    <a href="https://github.com/Dharshini19-01/BANKING_MANAGEMENT_BACKEND.git" target="_blank" rel="noopener noreferrer" style="color: var(--c-cyan); word-break: break-all;">
+                      github.com/Dharshini19-01/BANKING_MANAGEMENT_BACKEND.git ↗
+                    </a>
+                  </div>
+                  <ul class="resume-item-bullets">
+                    <li>Developed a full-stack Banking Management System using Spring Boot, HTML5, CSS3, JavaScript, and MySQL.</li>
+                    <li>Implemented Spring Security for secure authentication, authorization, and role-based access control.</li>
+                    <li>Designed and integrated RESTful APIs with Hibernate (JPA) to perform efficient CRUD operations and transaction management.</li>
+                    <li>Applied MVC Architecture, OOP, Exception Handling, Maven, and Git to build a scalable and maintainable application.</li>
+                  </ul>
+                </div>
+
+                <!-- Student Management System -->
+                <div class="resume-item">
+                  <div class="resume-item-header">
+                    <span class="resume-item-title">Student Management System</span>
+                  </div>
+                  <div style="font-size: 0.88rem; margin: 4px 0 10px 0;">
+                    <span style="color: var(--muted);">Source Code: </span>
+                    <a href="https://github.com/Dharshini19-01/STUDENT_HIBERNATE_PROJECTS.git" target="_blank" rel="noopener noreferrer" style="color: var(--c-cyan); word-break: break-all;">
+                      github.com/Dharshini19-01/STUDENT_HIBERNATE_PROJECTS.git ↗
+                    </a>
+                  </div>
+                  <ul class="resume-item-bullets">
+                    <li>Developed a Student Management System to manage student records, course details, and academic information.</li>
+                    <li>Implemented CRUD operations using Java, JDBC, Hibernate, and MySQL for efficient database management.</li>
+                    <li>Configured Hibernate entity mapping and ORM to simplify database interactions and improve code maintainability.</li>
+                    <li>Applied DAO Design Pattern, OOP, Exception Handling to develop a modular and reusable application.</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      <!-- PDF Preview View -->
+      <div id="pdfView" style="display: none;">
+        <div class="pdf-frame-wrapper">
+          <iframe src="/resume.pdf#toolbar=1&navpanes=0" title="Priyadharshini B Resume PDF"></iframe>
+        </div>
+        <div style="text-align: center; margin-top: 16px;">
+          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" style="color: var(--c-cyan); font-size: 0.92rem;">
+            Having trouble viewing the PDF preview? Open PDF directly in a new tab ↗
+          </a>
         </div>
       </div>
     </div>
@@ -207,7 +250,28 @@
         <span>✉️ <a href="mailto:priyadharshini.b19012006@gmail.com">priyadharshini.b19012006@gmail.com</a></span>
         <span>📍 Chennai, Tamil Nadu</span>
       </div>
-      <div class="footer-copy">© 2026 Priya Dharshini · Software Developer</div>
+      <div class="footer-copy">© 2026 Priya Dharshini · Java Developer</div>
     </footer>
+
+    <script>
+      const tabBtns = document.querySelectorAll('.tab-btn');
+      const interactiveView = document.getElementById('interactiveView');
+      const pdfView = document.getElementById('pdfView');
+
+      tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          tabBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          if (btn.dataset.tab === 'interactive') {
+            interactiveView.style.display = 'block';
+            pdfView.style.display = 'none';
+          } else {
+            interactiveView.style.display = 'block'; // keep display handled
+            interactiveView.style.display = 'none';
+            pdfView.style.display = 'block';
+          }
+        });
+      });
+    </script>
   </body>
 </html>

@@ -3,23 +3,37 @@ import './style.css'
 const profileImg = '/profile.jpg'
 
 const skills = [
-  'Java', 'Spring Boot', 'JavaScript',
-  'HTML & CSS', 'SQL', 'REST APIs', 'Git'
+  'Java', 'Spring Boot', 'RESTful API', 'Hibernate', 'Spring Data JPA',
+  'MySQL', 'MongoDB', 'Spring AI', 'JavaScript', 'HTML & CSS', 'Git'
 ]
 
 const projects = [
-  { title: 'Banking Management System', desc: 'A secure RESTful API backend service built with Spring Boot for managing bank accounts, transactions, and user authentication.', tags: ['Java', 'Spring Boot', 'REST API', 'MySQL'] },
-  { title: 'Restaurant Website', desc: 'An interactive online food ordering platform featuring dynamic menus, cart management, and seamless checkout UI.', tags: ['HTML', 'CSS', 'JavaScript'] },
-  { title: 'Bus Ticket Booking System', desc: 'A Low-Level Design (LLD) project focusing on object-oriented system design, seat selection, booking workflows, and design patterns.', tags: ['Java', 'LLD', 'OOPs', 'Design Patterns'] }
+  {
+    title: 'Banking Management System',
+    desc: 'A full-stack banking management system built with Spring Boot, HTML5, CSS3, JavaScript, and MySQL. Features Spring Security for authentication/authorization and Hibernate (JPA) for transaction management.',
+    tags: ['Java', 'Spring Boot', 'Spring Security', 'Hibernate (JPA)', 'REST API', 'MySQL'],
+    repo: 'https://github.com/Dharshini19-01/BANKING_MANAGEMENT_BACKEND.git'
+  },
+  {
+    title: 'Student Management System',
+    desc: 'A comprehensive academic management system using Java, Hibernate ORM, and JDBC to handle student records, course details, and CRUD operations applying DAO design patterns.',
+    tags: ['Java', 'JDBC', 'Hibernate', 'MySQL', 'DAO Pattern', 'OOP'],
+    repo: 'https://github.com/Dharshini19-01/STUDENT_HIBERNATE_PROJECTS.git'
+  },
+  {
+    title: 'Full Stack Web Applications',
+    desc: 'End-to-end web applications combining responsive frontend interfaces with Java Spring Boot backend services, database operations, and RESTful API integrations.',
+    tags: ['Java', 'Spring Boot', 'HTML5', 'CSS3', 'REST APIs', 'Postman']
+  }
 ]
 
 const services = [
-  { icon: '🌐', title: 'Web Development', desc: 'Responsive, modern websites and web apps built with clean, maintainable code.' },
-  { icon: '⚙️', title: 'Backend Development (Java)', desc: 'Robust REST APIs and server logic using Java, Spring Boot and relational databases.' },
-  { icon: '🎨', title: 'Frontend Design', desc: 'Attractive, accessible user interfaces with smooth animations and great UX.' },
-  { icon: '🗄️', title: 'Database Design', desc: 'Efficient schema design, queries and data modeling for SQL and NoSQL databases.' },
-  { icon: '🔌', title: 'API Integration', desc: 'Connecting apps with third-party services, payments and external data sources.' },
-  { icon: '🛠️', title: 'Bug Fixing & Maintenance', desc: 'Debugging, refactoring and keeping existing applications running smoothly.' }
+  { icon: '☕', title: 'Java & Spring Boot Development', desc: 'Robust REST APIs, backend services, and server logic using Java, Spring Boot, Spring Data JPA, and Hibernate.' },
+  { icon: '🌐', title: 'Web Development', desc: 'Responsive, modern web applications built with HTML5, CSS3, JavaScript, and clean maintainable code.' },
+  { icon: '🗄️', title: 'Database Design & Management', desc: 'Efficient schema design, CRUD operations, and ORM mapping for MySQL and MongoDB.' },
+  { icon: '🔐', title: 'Security & Authentication', desc: 'Implementing Spring Security for secure authentication, authorization, and role-based access control.' },
+  { icon: '🔌', title: 'RESTful API Integration', desc: 'Designing, testing with Postman, and integrating clean RESTful endpoints and third-party APIs.' },
+  { icon: '🤖', title: 'GenAI & Modern Tech', desc: 'Exploring modern developer tooling and AI capabilities with Spring AI and cloud deployments.' }
 ]
 
 const contacts = [
@@ -65,15 +79,15 @@ document.querySelector('#app').innerHTML = `
       </h1>
       <div class="hero-role-container">
         <span class="role-icon">⚡</span>
-        <span class="hero-role" id="dynamicRole">SOFTWARE DEVELOPER</span>
+        <span class="hero-role" id="dynamicRole">JAVA DEVELOPER</span>
       </div>
       <p class="hero-intro">
-        I'm a passionate software developer who loves turning ideas into real,
-        working products. I specialize in building reliable backends with Java
-        and creating clean, user-friendly web interfaces. I enjoy solving
-        problems, learning new tools, and shipping software that people enjoy
-        using.
+        I'm a passionate Java Web Developer and Computer Science &amp; Business Systems student with a strong foundation in Java, Spring Boot, SQL, DBMS, OOP, and web development. Passionate about building scalable software solutions, solving real-world problems, and continuously learning modern technologies.
       </p>
+      <div class="hero-cta-group" style="display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 24px;">
+        <a href="/resume.html" class="btn-download" style="text-decoration: none;">View &amp; Download Resume 📄</a>
+        <a href="#projects" class="btn-back" style="text-decoration: none;">Explore Projects ↓</a>
+      </div>
       <div class="skills">
         ${skills.map((s, idx) => `<span class="chip" style="--i: ${idx}">${s}</span>`).join('')}
       </div>
@@ -81,22 +95,30 @@ document.querySelector('#app').innerHTML = `
   </section>
 
   <section id="projects" class="reveal">
-    <h2 class="section-title"><span class="title-gradient">Projects</span></h2>
-    <p class="section-sub">A few things I've built recently.</p>
+    <h2 class="section-title"><span class="title-gradient">Featured Projects</span></h2>
+    <p class="section-sub">A showcase of systems and applications I've built.</p>
     <div class="cards">
       ${projects.map((p, i) => `
         <div class="card" style="--delay: ${i * 0.1}s">
           <h3>${p.title}</h3>
           <p>${p.desc}</p>
           <div class="tags">${p.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
+          ${p.repo ? `
+            <div style="margin-top: 18px;">
+              <a href="${p.repo}" target="_blank" rel="noopener noreferrer" class="project-link">
+                <span>View Source Code</span>
+                <span style="font-size: 1.1em;">↗</span>
+              </a>
+            </div>
+          ` : ''}
         </div>
       `).join('')}
     </div>
   </section>
 
   <section id="service" class="reveal">
-    <h2 class="section-title"><span class="title-gradient">Services</span></h2>
-    <p class="section-sub">What I can help you with.</p>
+    <h2 class="section-title"><span class="title-gradient">What I Do</span></h2>
+    <p class="section-sub">Core competencies and backend engineering strengths.</p>
     <div class="service-grid">
       ${services.map((s, i) => `
         <div class="service" style="--delay: ${i * 0.1}s">
@@ -129,7 +151,7 @@ document.querySelector('#app').innerHTML = `
       <span>✉️ <a href="mailto:priyadharshini.b19012006@gmail.com">priyadharshini.b19012006@gmail.com</a></span>
       <span>📍 Chennai, Tamil Nadu</span>
     </div>
-    <div class="footer-copy">© ${new Date().getFullYear()} Priya Dharshini · Software Developer</div>
+    <div class="footer-copy">© ${new Date().getFullYear()} Priya Dharshini · Java Developer</div>
   </footer>
 `
 
@@ -140,10 +162,10 @@ navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => na
 
 // Dynamic role rotator transition
 const roles = [
-  'SOFTWARE DEVELOPER',
-  'JAVA & SPRING BOOT SPECIALIST',
-  'FULL STACK ENGINEER',
-  'CREATIVE UI/UX DEVELOPER'
+  'JAVA DEVELOPER',
+  'SPRING BOOT SPECIALIST',
+  'BACKEND ENGINEER',
+  'FULL STACK DEVELOPER'
 ]
 let roleIdx = 0
 const dynamicRoleEl = document.getElementById('dynamicRole')
@@ -163,4 +185,3 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in') })
 }, { threshold: 0.12 })
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el))
-
