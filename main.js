@@ -38,7 +38,8 @@ const services = [
 
 const contacts = [
   { icon: '🐙', label: 'GitHub', value: 'github.com/Dharshini19-01', href: 'https://github.com/Dharshini19-01' },
-  { icon: '💼', label: 'LinkedIn', value: 'linkedin.com/in/priyadharshini-b-921ba0325', href: 'https://www.linkedin.com/in/priyadharshini-b-921ba0325' },
+  { icon: '💼', label: 'LinkedIn', value: 'linkedin.com/in/priyadharshini-b-921ba0325', href: 'https://linkedin.com/in/priyadharshini-b-921ba0325' },
+  { icon: '🌐', label: 'Portfolio', value: 'priyadharshini-portfolio-tawny.vercel.app', href: 'https://priyadharshini-portfolio-tawny.vercel.app/' },
   { icon: '✉️', label: 'Email', value: 'priyadharshini.b19012006@gmail.com', href: 'https://mail.google.com/mail/?view=cm&fs=1&to=priyadharshini.b19012006@gmail.com' }
 ]
 
